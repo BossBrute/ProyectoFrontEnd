@@ -15,6 +15,7 @@ function header(props){
 return(
     <div>
         <Switch>
+            
         <Route path="/student"></Route>
 
         <Route path="/student"></Route>

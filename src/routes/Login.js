@@ -27,7 +27,7 @@ function Login(props) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		axios.post('http://localhost:4000', {
-			email: email,
+			rut: email,
 			pass: pass,
 		}).then((data) => {
 			console.log(data);
@@ -39,19 +39,21 @@ function Login(props) {
 
 	return (
 		<Form>
-		  <Form.Group controlId="formBasicEmail">
+		  <Form.Group controlId="formBasicRUT">
 		    <Form.Label>
-				Email
+				Identificador
 			</Form.Label>
-			
-		    <Form.Control onChange={handleEmail} type="email" placeholder="Enter email" />
+
+		    <Form.Control onChange={handleEmail} type="RUT" placeholder="Enter email" />
 		    <Form.Text className="text-muted">
-		      Ingresar Email de acceso
+		      Ingresar Identificador de acceso
 		    </Form.Text>
 		  </Form.Group>
 
 		  <Form.Group controlId="formBasicPassword">
-		    <Form.Label>Contraseña</Form.Label>
+		    <Form.Label>
+				Contraseña
+			</Form.Label>
 		    <Form.Control onChange={handlePass} type="password" placeholder="Password" />
 		  </Form.Group>
 
