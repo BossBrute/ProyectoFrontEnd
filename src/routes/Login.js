@@ -3,7 +3,7 @@ import React, { useState, useEffects } from 'react';
 import axios from 'axios';
 import {Form, Button} from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
-import {login, logout} from './redux/actions/authActions.js';
+import {login, logout} from '/redux/actions/authActions.js';
 
 function Login(props) {
 	
@@ -66,4 +66,4 @@ function Login(props) {
 		  </Button>
 		</Form>
 	);
-}
+}export default Login;

@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button,Navbar,Form,FormControl,Nav, Container,Image,Col} from 'react-bootstrap';
 import { BrowserRouter, Switch, Router, Link } from 'react-router-dom';
 
-//import Login from "./routes/Login.js";
+import Login from "./routes/Login.js";
 
 
 function App() {
@@ -17,12 +17,14 @@ function App() {
       height: "700px",
       backgroundRepeat: "no-repeat"}}>
 
-  <Container>
-      <Col xs={1} sm={50} md={4}>
-        <Image src="/logo.png" rounded />
-      </Col>
-  </Container>
-  
+    <Container>
+        <Col xs={1} sm={50} md={4}>
+          <Image src="/logo.png" rounded />
+        </Col>
+    </Container>
+
+    <Login />
+
     </div>
   );
 }

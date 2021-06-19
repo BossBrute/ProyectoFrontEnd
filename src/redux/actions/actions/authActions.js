@@ -6,8 +6,8 @@ export const login = (datos) => {
     return {
         type: ACTION_LOGIN,
         payload: {
-            isLogged: true,
-            userType: datos.tipo,
+            CorrectLog: true,
+            //userType: datos.tipo,
             userName: datos.nombre,
             userRUT: datos.rut,
         }
@@ -19,7 +19,7 @@ export const logout = () => {
         type: ACTION_LOGOUT,
         payload: {
             isLogged: false,
-            userType: 0,
+            //userType: 0,
             userName: null,
             userdId: null,
         }

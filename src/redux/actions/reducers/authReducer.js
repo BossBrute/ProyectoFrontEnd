@@ -1,8 +1,9 @@
-import {ACTION_LOGIN, ACTION_LOGOUT, ACTION_MODIFYNAME} from "../authactions/Actions.js";
+import {ACTION_LOGIN, ACTION_LOGOUT, ACTION_MODIFYNAME} from "../actions/authActions.js";
 
 const initialState = {
-    isLogged: false,
-    userType: 0,
+    CorrectLog: false,
+    //userType: 0, -Next Update implement in 1.2 + DLC
+    //0 - NotLogged , 1 - Student , 2 - Profesor , 3 -  Attorney
     userName: null,
     userRUT: null,
 };
