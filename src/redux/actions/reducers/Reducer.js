@@ -1,4 +1,4 @@
-import {ACTION_LOGIN, ACTION_LOGOUT, ACTION_MODIFYNAME} from "../actions/authActions.js";
+import {ACTION_LOGIN, ACTION_LOGOUT, ACTION_MODIFYNAME} from "../actions/Actions.js";
 
 const initialState = {
     isLogged: false,
