@@ -19,7 +19,7 @@ function App() {
 
   <Container>
       <Col xs={6} md={4}>
-        <Image src="holder.js/171x180" rounded />
+        <Image src="/logo.png" rounded />
       </Col>
 
   </Container>
