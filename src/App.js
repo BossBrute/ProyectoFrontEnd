@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import {Button,Navbar,Form,FormControl,Nav} from 'react-bootstrap';
+import { BrowserRouter, Switch, Router, Link } from 'react-router-dom';
+
+//import Login from "./routes/Login.js";
+
+
 function App() {
+  //const CorrectLog = useSelector((store) => store.authReducer.CorrectLog);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{
+      backgroundImage: "url(/backgroud.png)",
+      height: "700px",
+      backgroundRepeat: "no-repeat"}}>
+    CorrectLog?
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          Colegio </a>
+      </nav>
+  
     </div>
   );
 }
