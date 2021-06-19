@@ -1,4 +1,4 @@
-import {ACTION_LOGIN, ACTION_LOGOUT, ACTION_MODIFYNAME} from "../actions/Actions.js";
+import {ACTION_LOGIN, ACTION_LOGOUT, ACTION_MODIFYNAME} from "../authactions/Actions.js";
 
 const initialState = {
     isLogged: false,
@@ -28,5 +28,4 @@ const authReducer = (state = initialState, action) => {
             return state;
     }
 }
-
 export default authReducer;

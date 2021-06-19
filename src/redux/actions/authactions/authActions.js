@@ -9,7 +9,7 @@ export const login = (datos) => {
             isLogged: true,
             userType: datos.tipo,
             userName: datos.nombre,
-            userId: datos.id,
+            userRUT: datos.rut,
         }
     }
 }

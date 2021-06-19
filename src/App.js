@@ -18,10 +18,9 @@ function App() {
       backgroundRepeat: "no-repeat"}}>
 
   <Container>
-      <Col xs={6} md={4}>
+      <Col xs={1} sm={50} md={4}>
         <Image src="/logo.png" rounded />
       </Col>
-
   </Container>
   
     </div>
