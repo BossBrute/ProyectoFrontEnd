@@ -21,7 +21,7 @@ export const logout = () => {
             isLogged: false,
             //userType: 0,
             userName: null,
-            userdId: null,
+            userRUT: null,
         }
     }
 }

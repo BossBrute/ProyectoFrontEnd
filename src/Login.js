@@ -1,20 +1,19 @@
-  
-import React, { useState, useEffects } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import {Form, Button} from 'react-bootstrap';
-
-import { useSelector , useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import {login, logout} from './redux/actions/authActions.js';
 
 function Login(props) {
 	
-	const [email, setEmail] = useState('');
+	const [Rut, setRut] = useState('');
 	const [pass, setPass] = useState('');
-	const [estado, setEstado] = useState('');
+	//const [estado, setEstado] = useState('');
 	const dispatch = useDispatch();
 
-	const handleEmail = (e) => {
-		setEmail(e.target.value);
+
+	const handleRut = (e) => {
+		setRut(e.target.value);
 	}
 
 	const handlePass = (e) => {
@@ -28,7 +27,7 @@ function Login(props) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		axios.post('http://localhost:4000', {
-			rut: email,
+			rut: Rut,
 			pass: pass,
 		}).then((data) => {
 			console.log(data);
@@ -45,7 +44,7 @@ function Login(props) {
 				Identificador
 			</Form.Label>
 
-		    <Form.Control onChange={handleEmail} type="RUT" placeholder="Enter email" />
+		    <Form.Control onChange={handleRut} type="RUT" placeholder="Enter Rut" />
 		    <Form.Text className="text-muted">
 		      Ingresar Identificador de acceso
 		    </Form.Text>
@@ -67,4 +66,5 @@ function Login(props) {
 		  </Button>
 		</Form>
 	);
-}export default Login;
+}
+export default Login;
