@@ -41,9 +41,9 @@ function Login(props) {
 						Identificador
 					</Form.Label>
 
-					<Form.Control onChange={handleRut} type="RUT" placeholder="Ingresar Rut" />
+					<Form.Control onChange={handleRut} type="RUT" placeholder=" " />
 					<Form.Text className="text-muted">
-					Ingresar Identificador de acceso
+					Ingresar Identificador de acceso:
 					</Form.Text>
 				</Form.Group>
 
@@ -52,6 +52,9 @@ function Login(props) {
 						Contraseña
 					</Form.Label>
 					<Form.Control onChange={handlePass} type="password" placeholder=" " />
+					<Form.Text className="text-muted">
+					Ingresar Contraseña de acceso:
+					</Form.Text>
 				</Form.Group>
 
 				<Button onClick={handleSubmit} variant="primary" type="submit">

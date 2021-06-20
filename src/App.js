@@ -21,14 +21,14 @@ function App() {
         backgroundRepeat: "no-repeat"}}>
         <Header/>
       </div>
-      
+
     ) : (
 
     <div style={{
       backgroundImage: "url(/backgroud.png)",
       height: "700px",
       backgroundRepeat: "no-repeat"}}>
-
+    
     <Container>
         <Col xs={1} sm={50} md={4}>
           <Image src="/logo.png" rounded />
