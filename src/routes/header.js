@@ -12,34 +12,71 @@ import {
 
 function header(props){
 return(
-    <div>
+    <Router>
+        <div>
 
-    <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown>
-            </Nav>
-            <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-success">Search</Button>
-            </Form>
-        </Navbar.Collapse>
-    </Navbar>
+            {/* LINK */}
+            <Navbar bg="dark" variant="dark">
+                <Nav className="mr-auto">
+                    <Nav.Link as={Link} to="/"><HomeRoundedIcon/></Nav.Link>
+
+                {/* Header Client */}
+                { userType == 1 && 
+                    <Nav.Link as={Link} to="/ClientProject">Proyecto</Nav.Link>
+                }
+
+                {/* Header Manager */}
+                { userType == 2 && 
+                <Nav className="mr-auto">
+                    <Nav.Link as={Link} to="/ManagerListDev">Lista desarrolladores</Nav.Link>
+                    <Nav.Link as={Link} to="/ManagerProject">Proyectos</Nav.Link>
+                    <Nav.Link as={Link} to="/ManagerAssignMod">Reasignaciones</Nav.Link>
+                </Nav>
+                }
+
+                {/* Header Developer */}
+                { userType == 3 && 
+                <Nav className="mr-auto">
+                    <Nav.Link as={Link} to="/DevProfile">Perfil</Nav.Link>,
+                    <Nav.Link as={Link} to="/DevModify">Modificar datos</Nav.Link>
+                    <Nav.Link as={Link} to="/DevProject">Proyecto</Nav.Link>
+                </Nav>
+                }
+                </Nav>
+
+                <Nav>
+                    <Nav.Link as={Link} to="/Logout"><ExitToAppIcon /></Nav.Link>
+                </Nav>
+            </Navbar>
 
 
-    
+            {/* SWITCH */}
+            <Switch>
+                {/* Professor Route */}
+                <Route path="/professor">
+                    <DevModify />
+                </Route>
+                <Route path="/professorProfile">
+                    <DevProfile />
+                </Route>
+                <Route path="/professor">
+                    <DevProject />
+                </Route>
 
-    </div>
+                {/* Logout */}
+                <Route path="/Logout">
+                    <Logout />
+                </Route>
+
+                {/* Routes Default */}
+                <Route path="/">
+                    <Home />
+                </Route>
+            </Switch>
+
+        </div>
+    </Router>
+
 	);
 }
 export default header;
