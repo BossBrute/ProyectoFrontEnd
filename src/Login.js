@@ -58,11 +58,7 @@ function Login(props) {
 		  </Form.Group>
 
 		  <Button onClick={handleSubmit} variant="primary" type="submit">
-		    Enviar
-		  </Button>
-
-		  <Button onClick={handleLogout} variant="danger" type="button">
-		    Logout
+		    Ingresar
 		  </Button>
 		</Form>
 	);
