@@ -7,12 +7,23 @@ import { BrowserRouter, Switch, Router, Link } from 'react-router-dom';
 
 import {login, logout} from './redux/actions/authActions.js';
 import Login from "./Login.js";
+import Header from "./routes/header.js"
 
 import {useSelector} from "react-redux";
 
 function App() {
-  const correctLog = useSelector((store) => store.authReducer.CorrectLog);
-  return (
+  const CorrectLog = useSelector((store) => store.authReducer.CorrectLog);
+  return CorrectLog ? (
+
+      <div style={{
+        backgroundImage: "url(/backgroud.png)",
+        height: "700px",
+        backgroundRepeat: "no-repeat"}}>
+        <Header/>
+      </div>
+      
+    ) : (
+
     <div style={{
       backgroundImage: "url(/backgroud.png)",
       height: "700px",
