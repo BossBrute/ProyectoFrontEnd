@@ -5,11 +5,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button,Navbar,Form,FormControl,Nav, Container,Image,Col} from 'react-bootstrap';
 import { BrowserRouter, Switch, Router, Link } from 'react-router-dom';
 
-
+import {login, logout} from './redux/actions/authActions.js';
 import Login from "./Login.js";
 
+import {useSelector} from "react-redux";
+
 function App() {
-  //const CorrectLog = useSelector((store) => store.authReducer.CorrectLog);
+  const correctLog = useSelector((store) => store.authReducer.CorrectLog);
   return (
     <div style={{
       backgroundImage: "url(/backgroud.png)",
@@ -22,8 +24,11 @@ function App() {
         </Col>
     </Container>
 
-    <Login />
-
+    <Container >
+      <Col sm="12" md={{ size: 6, offset: 1 }}>
+        <Login />
+      </Col>
+    </Container>
     </div>
   );
 }
